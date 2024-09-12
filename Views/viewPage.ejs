@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="../css/viewpage.css">
+</head>
+<body>
+    <div class="movie-container">
+        <div class="movie-poster">
+            <img src="/<%= viewMovieDetails.path %>" alt="<%= viewMovieDetails.movie_title %>" class="img">
+        </div>
+        <div class="movie-details">
+            <h1 class="movie-title"><%= viewMovieDetails.movie_title %></h1>
+            <p class="movie-genre text-white"><%= viewMovieDetails.genre %></p>
+            <p class="movie-release text-white"><%= viewMovieDetails.relese_date %></p>
+            <p class="movie-reating "><%= viewMovieDetails.movie_reating %>★★★★☆</p>
+            <p class="movie-description">
+                <%= viewMovieDetails.movie_description %>
+            </p>
+            <button class="watch-now">Watch Now</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+</body>
+</html>
