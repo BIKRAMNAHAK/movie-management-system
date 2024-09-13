@@ -13,6 +13,19 @@ const addform = (req , res)=>{
 }
 
 const addmovieController =async (req, res) => {
+    const allFilds = {
+        title: req.body.title,
+        description: req.body.description,
+        path: req.file ? req.file.path : null, 
+        genre: req.body.genre,
+        date: req.body.date,
+        reating: req.body.reating
+    }
+
+    if (!allFilds.title || !allFilds.description || !allFilds.path || !allFilds.genre || !allFilds.date || !allFilds.reating) {
+        return res.status(400).send('All fields are required. Please fill out the entire form.');
+    }
+
     const movieData = {
         movie_title: req.body.title ,
         relese_date:req.body.date,
